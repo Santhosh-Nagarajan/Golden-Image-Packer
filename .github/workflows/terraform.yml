@@ -48,8 +48,11 @@ jobs:
         run: terraform fmt
 
       - name: Terraform Validation
-        run: terraform Validate
-
-      - name: Terraform plan
+        run: terraform validate
+      
+      - name: Terraform Planning
+        run: terraform plan
+        
+      - name: Terraform Apply
         run: terraform apply --auto-approve
     

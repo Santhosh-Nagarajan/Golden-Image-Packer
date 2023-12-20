@@ -25,11 +25,11 @@
         "sudo apt-get install -y nginx"
       ]
     }
-    // Add additional provisioners as needed
+    
   ],
 
   "variables": {
     "project_id": "playground-s-11-9efb5b94"
-    // Add other variables as needed
+    
   }
 }

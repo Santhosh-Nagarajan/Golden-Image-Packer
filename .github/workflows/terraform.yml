@@ -24,6 +24,6 @@ jobs:
       run: packer version
 
     - name: Run Packer Build
-      run: packer build packer-demo.json
+      run: packer validate packer-demo.json
              
     

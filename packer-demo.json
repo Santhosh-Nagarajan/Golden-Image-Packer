@@ -1,0 +1,11 @@
+{
+  "builders":  [
+    {
+      "type": "googlecompute",
+      "account_file": "creden.json"
+      "project_id": "",
+      "source_image": "",
+      "ssh_username": "",
+      "zone": "us-central-a"
+    }
+  ],

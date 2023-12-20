@@ -3,9 +3,18 @@
     {
       "type": "googlecompute",
       "account_file": "creden.json"
-      "project_id": "",
-      "source_image": "",
-      "ssh_username": "",
+      "project_id": "playground-s-11-bf1e20eb",
+      "source_image": "ubuntu-2204-jammy-arm64-v20231213a",
+      "ssh_username": "packer",
       "zone": "us-central-a"
     }
   ],
+
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "gk.log",
+      "destination": "/tmp/gk.log"
+    }
+  ]
+}  

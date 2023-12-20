@@ -28,5 +28,28 @@ jobs:
           packer validate packer-demo.json
           packer build packer-demo.json
           
-             
+  terraform-job2:
+    runs-on: ubuntu-latest
+    needs: Golden-Image
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.3   # Specify the desired Terraform version
+
+      - name: Terraform Init
+        run: terraform init
+      
+      - name: Terraform Format
+        run: terraform fmt
+
+      - name: Terraform Validation
+        run: terraform Validate
+
+      - name: Terraform plan
+        run: terraform apply --auto-approve
     

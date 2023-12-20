@@ -4,7 +4,7 @@ region = "us-central1"
 
 zone = "us-central1-b"
 
-credential = "credentials.json"
+credential = "creden.json"
 
 
 instance-name = "myinstance"

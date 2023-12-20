@@ -25,7 +25,7 @@ jobs:
             
     -  name: Packer Validation
        run: |
-             packer init .
+    
              
              packer build packer-demo.json
              

@@ -1,8 +1,8 @@
-packer {
-  required_plugins {
-    googlecompute = {
-      source  = "github.com/hashicorp/googlecompute"
-      version = "~> 1"
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "4.60.1"
     }
   }
 }

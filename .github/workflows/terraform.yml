@@ -16,9 +16,10 @@ jobs:
           sudo apt-get update && sudo apt-get install packer
 
     -  name: Packer Validation
-       run: packer validate
+       run: packer validate packer-demo.json
 
-    -  name: Packer Validation
-       run: packer validate
+    -  name: Packer Build
+       run: packer build packer-demo.json
+       
              
     

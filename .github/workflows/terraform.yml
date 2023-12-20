@@ -9,6 +9,10 @@ jobs:
   Golden-Image:
     runs-on: ubuntu-latest
     steps:
+    
+    - name: Checkout code
+      uses: actions/checkout@v2
+        
     -  name: Packer Install
        run: |
           curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -

@@ -1,0 +1,21 @@
+name: 'Hashicrop Packer Deploy Golden Image'
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+
+jobs:
+  Golden-Image:
+    runs-on: ubuntu-latest
+    steps:
+    -  name: Packer Install
+       run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+          sudo apt-get update && sudo apt-get install packer
+
+    -  name: Echo
+       run: |
+             echo "Success"
+    

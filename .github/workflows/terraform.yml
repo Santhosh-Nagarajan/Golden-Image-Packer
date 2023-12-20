@@ -25,6 +25,7 @@ jobs:
             
     -  name: Packer Validation
        run: |
+             packer init packer-demo.json
              packer init -upgrade packer-demo.json
              packer validate packer-demo.json
              

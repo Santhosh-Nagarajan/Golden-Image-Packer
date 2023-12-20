@@ -14,7 +14,7 @@ resource "google_compute_instance" "default" {
         my_label = "lable-${var.instance-name}"
       }
     }
-    kms_key_self_link = google_kms_crypto_key.example-key.id
+    
   }
 
   shielded_instance_config {

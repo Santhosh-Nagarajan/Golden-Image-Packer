@@ -6,7 +6,8 @@
       "project_id": "playground-s-11-bf1e20eb",
       "source_image": "ubuntu-2204-jammy-arm64-v20231213a",
       "ssh_username": "packer",
-      "zone": "us-central-a"
+      "image_family": "my-golden-family",
+      "zone": "us-central1-a"
     }
   ],
 

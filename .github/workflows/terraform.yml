@@ -26,7 +26,7 @@ jobs:
     -  name: Packer Validation
        run: |
              packer plugins install github.com/hashicorp/googlecompute
-             packer init -upgrade
+             
              packer validate packer-demo.json
              
     -  name: Packer Build

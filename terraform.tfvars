@@ -14,8 +14,6 @@ machine-type = "e2-medium"
 
 size = "20"
 
-image-name = "my-golden-image"
-
 startup-script = "test.sh"
 
 email = "cli-service-account-1@playground-s-11-4c773524.iam.gserviceaccount.com"

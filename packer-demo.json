@@ -28,18 +28,6 @@
     
   ],
 
-  "post-processors": [
-    {
-      "type": "shell-local",
-      "inline": [
-        "gcloud compute images delete --project {{user `project_id`}} --quiet my-golden-image-70"
-      ]
-    }
-  ],
-
-
-
-  
 
   "variables": {
     "project_id": "playground-s-11-79d214a5",

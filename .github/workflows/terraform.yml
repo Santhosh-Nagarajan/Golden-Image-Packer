@@ -5,6 +5,9 @@ on:
     branches: [ "master" ]
   pull_request:
 
+env:
+    GOLDEN_IMAGE_VERSION: ${{ github.run_number }}  
+
 jobs:
   Golden-Image:
     runs-on: ubuntu-latest
@@ -26,8 +29,8 @@ jobs:
     - name: Run Packer Build
       run: |
           
-          packer validate -var 'image_name=my-custom-image' packer-demo.json
-          packer build -var 'image_name=my-custom-image' packer-demo.json
+          packer validate -var 'image_name=my-custom-image-${{GOLDEN_IMAGE_VERSION}}' packer-demo.json
+          packer build -var 'image_name=my-custom-image-${{GOLDEN_IMAGE_VERSION}}' packer-demo.json
           
   terraform-job2:
     runs-on: ubuntu-latest

@@ -54,8 +54,8 @@ jobs:
       - name: Terraform Validation
         run: terraform validate
       
-      - name: Terraform -var="image-name=my-custom-image-${GOLDEN_IMAGE_VERSION}" Planning
-        run: terraform plan 
+      - name: Terraform Planning
+        run: terraform plan -var="image-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"  -var="instance-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"
         
       - name: Terraform Apply
         run: terraform apply --auto-approve -var="image-name=my-custom-image-${GOLDEN_IMAGE_VERSION}" -var="instance-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"

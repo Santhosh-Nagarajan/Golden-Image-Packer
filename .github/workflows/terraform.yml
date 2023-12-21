@@ -29,8 +29,8 @@ jobs:
     - name: Run Packer Build
       run: |
           
-          packer validate -var "image_name=my-custom-image-${GOLDEN_IMAGE_VERSION}" packer-demo.json
-          packer build -var "image_name=my-custom-image-${GOLDEN_IMAGE_VERSION}" packer-demo.json
+          packer validate -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
+          packer build -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           
   terraform-job2:
     runs-on: ubuntu-latest
@@ -55,8 +55,8 @@ jobs:
         run: terraform validate
       
       - name: Terraform Planning
-        run: terraform plan -var="image-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"  -var="instance-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"
+        run: terraform plan -var="image-name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}"  -var="instance-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"
         
       - name: Terraform Apply
-        run: terraform apply --auto-approve -var="image-name=my-custom-image-${GOLDEN_IMAGE_VERSION}" -var="instance-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"
+        run: terraform apply --auto-approve -var="image-name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" -var="instance-name=my-custom-image-${GOLDEN_IMAGE_VERSION}"
     

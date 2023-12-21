@@ -28,6 +28,14 @@
     
   ],
 
+  "post-processors": [
+    {
+      "type": "shell-local",
+      "inline": [
+        "gcloud compute images delete --project {{user `project_id`}} --quiet my-golden-image-70"
+      ]
+    }
+  ],
 
 
 

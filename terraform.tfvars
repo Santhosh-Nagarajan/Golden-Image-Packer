@@ -1,4 +1,4 @@
-project-id = "playground-s-11-4c773524"
+project-id = "playground-s-11-79d214a5"
 
 region = "us-central1"
 
@@ -18,6 +18,6 @@ email = "cli-service-account-1@playground-s-11-4c773524.iam.gserviceaccount.com"
 
 port = ["80"]
 
-http-source-range = ["10.0.0.0/8"]
+http-source-range = ["0.0.0.0/0"]
 
 ssh-source-range = ["0.0.0.0/0"]

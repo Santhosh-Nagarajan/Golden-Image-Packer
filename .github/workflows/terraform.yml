@@ -28,7 +28,7 @@ jobs:
 
     - name: Run Packer Build
       run: |
-          
+          gcloud compute images delete my-golden-image-74 --project=playground-s-11-79d214a5
           packer validate -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           packer build -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           

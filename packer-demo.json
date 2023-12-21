@@ -28,6 +28,24 @@
     
   ],
 
+  
+  "post-processors": [
+    {
+      "type": "googlecompute",
+      "project_id": "{{user `project_id`}}",
+      "account_file": "creden.json",
+      "image_delete": true,
+      "image_family": "my-golden-family"
+    }
+  ],
+
+
+
+
+
+
+  
+
   "variables": {
     "project_id": "playground-s-11-79d214a5",
     "image_name": "golden-image"

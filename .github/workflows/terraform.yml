@@ -58,5 +58,5 @@ jobs:
         run: terraform plan 
         
       - name: Terraform Apply
-        run: terraform -var="image-name=my-custom-image-${GOLDEN_IMAGE_VERSION}" apply --auto-approve
+        run: terraform apply --auto-approve -var="image-name=my-custom-image-${GOLDEN_IMAGE_VERSION}" 
     

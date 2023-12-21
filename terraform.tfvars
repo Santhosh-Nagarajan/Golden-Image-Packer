@@ -1,4 +1,4 @@
-project-id = "playground-s-11-9efb5b94"
+project-id = "playground-s-11-4c773524"
 
 region = "us-central1"
 
@@ -18,7 +18,7 @@ image-name = "my-golden-image"
 
 startup-script = "test.sh"
 
-email = "cli-service-account-1@playground-s-11-9efb5b94.iam.gserviceaccount.com"
+email = "cli-service-account-1@playground-s-11-4c773524.iam.gserviceaccount.com"
 
 port = ["80"]
 

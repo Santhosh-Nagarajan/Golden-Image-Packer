@@ -25,7 +25,7 @@ jobs:
 
     - name: Run Packer Build
       run: |
-          export image_name="my-custom-image"
+          
           packer validate packer-demo.json
           packer build packer-demo.json
           

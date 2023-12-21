@@ -7,8 +7,6 @@ zone = "us-central1-b"
 credential = "creden.json"
 
 
-instance-name = "myinstance"
-
 machine-type = "e2-medium"
 
 

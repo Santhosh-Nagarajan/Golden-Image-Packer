@@ -29,8 +29,8 @@ jobs:
     - name: Run Packer Build
       run: |
           
-          packer validate -var 'image_name=my-custom-image-${{GOLDEN_IMAGE_VERSION}}' packer-demo.json
-          packer build -var 'image_name=my-custom-image-${{GOLDEN_IMAGE_VERSION}}' packer-demo.json
+          packer validate -var "image_name=my-custom-image-${GOLDEN_IMAGE_VERSION}" packer-demo.json
+          packer build -var "image_name=my-custom-image-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           
   terraform-job2:
     runs-on: ubuntu-latest

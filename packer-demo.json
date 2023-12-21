@@ -35,7 +35,7 @@
       "project_id": "{{user `project_id`}}",
       "account_file": "creden.json",
       "image_delete": true,
-      "image_family": "my-golden-family"
+      "image_family": "my-golden-family",
       "image_name": "my-golden-image-70"
     }
   ],

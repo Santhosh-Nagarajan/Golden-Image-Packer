@@ -28,9 +28,8 @@ jobs:
 
     - name: Run Packer Build
       run: |
-          sudo apt update
-          sudo apt install google-cloud-sdk
-          gcloud init
+
+          
           packer validate -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           packer build -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           

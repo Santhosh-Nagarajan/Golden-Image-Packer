@@ -30,6 +30,8 @@ jobs:
       run: |
 
           gcloud config set project playground-s-11-79d214a5
+          gcloud auth activate-service-account cli-service-account-1@playground-s-11-79d214a5.iam.gserviceaccount.com --key-file= creden.json
+          gcloud compute images delete my-golden-image-82 --project=playground-s-11-79d214a5
           packer validate -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           packer build -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           

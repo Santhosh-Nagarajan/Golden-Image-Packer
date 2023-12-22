@@ -29,11 +29,11 @@ jobs:
     - name: Run Packer Build
       run: |
 
-          gcloud config set project playground-s-11-2ee8c2ae
+          gcloud config set project playground-s-11-95170712
           
-          gcloud auth activate-service-account cli-service-account-1@playground-s-11-2ee8c2ae.iam.gserviceaccount.com --key-file=creden.json --project=playground-s-11-2ee8c2ae
+          gcloud auth activate-service-account cli-service-account-1@playground-s-11-95170712.iam.gserviceaccount.com --key-file=creden.json --project=playground-s-11-2ee8c2ae
                   
-          gcloud compute images list --project=playground-s-11-2ee8c2ae --filter="name~'my-golden-image-'" --format="value(name)" | xargs -I {} gcloud compute images delete {} --project=playground-s-11-2ee8c2ae --quiet
+          gcloud compute images list --project=playground-s-11-95170712 --filter="name~'my-golden-image-'" --format="value(name)" | xargs -I {} gcloud compute images delete {} --project=playground-s-11-95170712 --quiet
          
           packer validate -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json
           packer build -var "image_name=${{ secrets.GOLDEN_IMAGE_NAME }}-${GOLDEN_IMAGE_VERSION}" packer-demo.json

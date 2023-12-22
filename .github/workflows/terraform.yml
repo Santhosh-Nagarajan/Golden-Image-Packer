@@ -31,7 +31,7 @@ jobs:
 
           gcloud config set project playground-s-11-2ee8c2ae
           
-          gcloud auth activate-service-account cli-service-account-1@playground-s-11-79d214a5.iam.gserviceaccount.com --key-file=creden.json --project=playground-s-11-2ee8c2ae
+          gcloud auth activate-service-account cli-service-account-1@playground-s-11-2ee8c2ae.iam.gserviceaccount.com --key-file=creden.json --project=playground-s-11-2ee8c2ae
                   
           gcloud compute images list --project=playground-s-11-2ee8c2ae --filter="name~'my-golden-image-'" --format="value(name)" | xargs -I {} gcloud compute images delete {} --project=playground-s-11-2ee8c2ae --quiet
          

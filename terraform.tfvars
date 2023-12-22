@@ -1,4 +1,4 @@
-project-id = "playground-s-11-2ee8c2ae"
+project-id = "playground-s-11-95170712"
 
 region = "us-central1"
 
@@ -14,7 +14,7 @@ size = "20"
 
 startup-script = "test.sh"
 
-email = "cli-service-account-1@playground-s-11-2ee8c2ae.iam.gserviceaccount.com"
+email = "cli-service-account-1@playground-s-11-95170712.iam.gserviceaccount.com"
 
 port = ["80"]
 
